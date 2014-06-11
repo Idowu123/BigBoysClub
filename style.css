@@ -1,0 +1,123 @@
+  /*  CSS of BigBoysClub App
+-------------------------------------
+      Authors: @impactmass and @idowu123
+      URL: Github accounts with the handle above
+      
+----------------------------------------*/
+
+
+/*The margin is drawn outside.*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;}
+
+
+/**
+* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/ 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1em;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+    /* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html{
+	-ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;}
+
+ol, ul {
+	list-style: none;}
+
+blockquote, q {
+	quotes: none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;}
+
+.alert.alert-notice{
+  display: none;}
+
+/*---------------Typography--------------------*/
+@media (max-width: 20em){
+  html{font-size: 85% !important;}}
+
+body {
+  color: #0f2a36;
+  font-family: Georgia, serif;
+  line-height: 1.25em;}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 30px 0;}
+
+h1 {
+  font-size: 1.8em;
+  margin: 0.1em 0;
+  font-weight: bold;
+  font-family: 'Arvo', Constantia, "Lucida Bright", "Lucida Serif", Lucida, Georgia, serif;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -2px;}
+
+header h1, header a{
+  line-height: 50px;}
+
+h2 {
+  color: #dd3b2a;
+  font-size: 1.5em;
+  font-weight: 400;}
+
+h3 {
+  color: #dd3b2a;
+  font-family: 'Arvo', Constantia, "Lucida Bright", "Lucida Serif", Lucida, Georgia, serif;
+  font-size: 1.2em;
+  line-height: 1.2em;}
+
+h3 + p {
+  margin-top: 0px;}
+
+abbr[title] {
+  border: none;}
+
+
+/*-------Links-------*/
+a {
+  color: #2babe1;
+  text-decoration: none;}
+
+a:active {
+  outline: thin dotted;}
+
+abbr[title] {
+  border-bottom: 1px dotted;}
+
+/*--------End ---- of ----Typography-------*/
