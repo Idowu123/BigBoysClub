@@ -121,6 +121,50 @@ abbr[title] {
 /*--------End ---- of ----Typography-------*/
  
 
- .hide{
+.hide{
   display: none;
- }
+}
+
+div.logo{
+  float: left;
+
+}
+
+div.tag{
+  float: right;
+}
+
+.group:after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+
+div.container li{
+  display: block;
+  position: relative;
+  text-align: center;
+  background-color: 
+}
+
+
+
+#main{
+  border: 5px solid blue;
+  text-align: center;
+
+}
+
+#main .container li{
+  font-size: 15px;
+}
+
+div.container h1{
+  font-size: 30px;
+
+}
+
+
