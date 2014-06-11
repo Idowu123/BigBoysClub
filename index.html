@@ -3,6 +3,8 @@
 	<head>
 		<title>BigBoysClub App</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery-custom.js"></script>
 	</head>
 	<body>
 		<header class="group">
@@ -19,11 +21,11 @@
 		<div id="main">
 			<div class="page" id="welcome">
 				<div class="container">
-					<h1>WELCOME</h1>
+					<h1>WELCOME!</h1>
 					<p>Find out if you belong to the Big Boys Club.</p>
 					<p>We dare you!</p>
-					<p><a href="#">Get Started</a></p>
-					<p>The Big Boys Club consists of classy boys</p>
+					<p><a href="#" id="start">Get Started</a></p>
+					<p>The Big Boys Club is the club of classiest classy boys in the city.</p>
 				</div>
 			</div>
 			
@@ -33,7 +35,7 @@
 					<ul>
 						<li>Bentley</li>
 						<li>Rolls Royce</li>
-						<li>Porsche Panama</li>
+						<li>Porsche Panamera S</li>
 						<li>Prado</li>
 					</ul>
 				</div>	
@@ -135,9 +137,10 @@
 				</div>
 			</div>
 		</div>
-		<ul>
-			<li><a href="#">next</a></li>
-			<li><a href="#">previous</a></li>
+		
+		<ul id="quiz-nav" class="hide">
+			<li><a href="#" id="next">next</a></li>
+			<li><a href="#" id="previous">previous</a></li>
 		</ul>
 
 	</body>
