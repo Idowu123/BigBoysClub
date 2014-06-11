@@ -69,8 +69,6 @@ table {
   display: none;}
 
 /*---------------Typography--------------------*/
-@media (max-width: 20em){
-  html{font-size: 85% !important;}}
 
 body {
   color: #0f2a36;
@@ -121,3 +119,8 @@ abbr[title] {
   border-bottom: 1px dotted;}
 
 /*--------End ---- of ----Typography-------*/
+ 
+
+ .hide{
+  display: none;
+ }
