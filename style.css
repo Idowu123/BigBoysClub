@@ -120,9 +120,16 @@ abbr[title] {
 
 /*--------End ---- of ----Typography-------*/
  
-
 .hide{
   display: none;
+}
+
+
+
+div.container{
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid red;
 }
 
 div.logo{
@@ -143,19 +150,9 @@ div.tag{
 }
 
 
-div.container li{
-  display: block;
-  position: relative;
-  text-align: center;
-  background-color: 
-}
-
-
-
 #main{
   border: 5px solid blue;
   text-align: center;
-
 }
 
 #main .container li{
@@ -164,7 +161,15 @@ div.container li{
 
 div.container h1{
   font-size: 30px;
+  font-weight: bold;
 
+}
+
+
+div.container li{
+  display: block;
+  text-align: center;
+   
 }
 
 
