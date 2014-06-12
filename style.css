@@ -177,7 +177,8 @@ div.container li{
 
 html{
   background:#fff url('images/house.jpg') top center;
-  background-size: cover;}
+  background-size: cover;
+}
 
 #welcome h1{
   font-family: 'Lemon', cursive !important;
@@ -186,7 +187,7 @@ html{
   text-align: center;
   padding: 100px 0 0 0;
   font-size: 1.2em;
-  color: #fffafa;
+  color: #fff;
 }
 
 #main .container{
@@ -196,12 +197,13 @@ html{
 
 #main .main{
   opacity: 0.8; padding: 70px 0 0 0;
-  background-color: #000;
+  background-color: #420214;
   border-radius: 3em;}
 
 .main h1{
   padding-bottom: 15px;
 }
+
 h1+p{
   margin-bottom: 0;
   padding-bottom: 5px;
@@ -278,8 +280,8 @@ header .container{
 }
 
 header{
-  background: #ff5959 url('headerbg/jpg') repeat top left;
-  box-shadow: 0 1px 9px rgb();
+  background: #ff5959 url('images/headerbg.jpg') top left;
+  box-shadow: 0 1px 9px #000;
 }
 
 .vcenter:before{
