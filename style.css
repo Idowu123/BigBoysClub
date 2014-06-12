@@ -72,22 +72,24 @@ table {
 
 body {
   color: #0f2a36;
-  font-family: Georgia, serif;
-  line-height: 1.25em;}
+  font-family: Helvetica, Verdana, sans-serif;
+  line-height: 1.25em; font-size: 62.5%;
+  min-width: 900px;}
 
 h1,h2,h3,h4,h5,h6,p{
   margin: 30px 0;}
+
+p, ul, li, ol {
+  font-size: 1.2em;
+}
 
 h1 {
   font-size: 1.8em;
   margin: 0.1em 0;
   font-weight: bold;
   font-family: 'Arvo', Constantia, "Lucida Bright", "Lucida Serif", Lucida, Georgia, serif;
-  text-rendering: optimizeLegibility;
   letter-spacing: -2px;}
 
-header h1, header a{
-  line-height: 50px;}
 
 h2 {
   color: #dd3b2a;
@@ -162,6 +164,7 @@ div.tag{
 div.container h1{
   font-size: 30px;
   font-weight: bold;
+  color:;
 
 }
 
@@ -172,4 +175,41 @@ div.container li{
    
 }
 
+#quiz-nav li{
+  display: inline;
+  text-align: center;
+}
 
+#main{
+  backgrond: #333 url('images/car.jpg') top center;
+  height: 700px;
+}
+
+#car{
+  background-image: url('images/car.jpg');
+}
+#watch{
+  background-image: url('images/watch.jpg');
+}
+#residence{
+  background-image: url('images/house.jpg')
+}
+
+#phone{
+  background-image: url('images/phone.jpg');
+}
+
+#club{
+  background-image: url('images/club.jpg');
+}
+
+#shoe{
+  background-image: url('images/shoe.jpg');
+}
+#perfume{
+  background-image: url('images/perfume.jpg');
+}
+
+#cloth{
+  background-image: url('images/cloth.jpg');
+}
