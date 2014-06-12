@@ -72,7 +72,7 @@ table {
 
 body {
   color: #0f2a36;
-  font-family: Helvetica, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.25em; font-size: 62.5%;
   min-width: 900px;}
 
@@ -84,10 +84,9 @@ p, ul, li, ol {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 1.1em;
   margin: 0.1em 0;
   font-weight: bold;
-  font-family: 'Arvo', Constantia, "Lucida Bright", "Lucida Serif", Lucida, Georgia, serif;
   letter-spacing: -2px;}
 
 
@@ -98,7 +97,6 @@ h2 {
 
 h3 {
   color: #dd3b2a;
-  font-family: 'Arvo', Constantia, "Lucida Bright", "Lucida Serif", Lucida, Georgia, serif;
   font-size: 1.2em;
   line-height: 1.2em;}
 
@@ -129,7 +127,6 @@ abbr[title] {
 div.container{
   width: 70%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 div.logo{
@@ -149,10 +146,6 @@ div.tag{
 }
 
 
-#main{
-  border: 5px solid blue;
-  text-align: center;
-}
 
 #main .container li{
   font-size: 15px;
@@ -182,9 +175,42 @@ div.container li{
   text-align: center;
 }
 
+html{
+  background:#fff url('images/house.jpg') top center;
+  background-size: cover;}
+
+#welcome h1{
+  font-family: 'Lemon', cursive !important;
+}
 #main{
-  backgrond:#fff url('images/car.jpg') top center;
-  height: 700px;
+  text-align: center;
+  padding: 100px 0 0 0;
+  font-size: 1.2em;
+  color: #fffafa;
+}
+
+#main .container{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#main .main{
+  opacity: 0.8; padding: 70px 0 0 0;
+  background-color: #000;
+  border-radius: 3em;}
+
+.main h1{
+  padding-bottom: 15px;
+}
+h1+p{
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+.bold{
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
 /*#car{
@@ -215,3 +241,65 @@ div.container li{
 #cloth{
   background-image: url('images/cloth.jpg');
 }*/
+
+header .container{
+  padding:5px 0;
+}
+
+.logo{
+  padding: 10px 10px;
+}
+
+.logo h1, .logo p{
+  margin: 0;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.logo h1 span{
+  font-size: 0.5em;
+  padding: 0 5px;
+}
+
+.logo h1{
+  letter-spacing: 1px;
+  font-family: 'Lemon', cursive !important;
+  color: #fff;
+  text-shadow: 0 1px 1px #fff5e4;
+}
+
+.logo p{
+  font-style: italic;
+}
+
+.tag{
+  font-weight: bold;
+  color: #dedede;
+}
+
+header{
+  background: #ff5959 url('headerbg/jpg') repeat top left;
+  box-shadow: 0 1px 9px rgb();
+}
+
+.vcenter:before{
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.00005em;
+}
+
+#start{
+  text-shadow: 0 1px 3px rgb(220, 36, 36);
+  font-size: 1.625em !important;
+  color: #fff;
+  text-transform: uppercase; width: 250px;
+  display: inline-block; vertical-align: middle;
+  padding: 20px 0; letter-spacing: 1px;
+  background: #3f50ab url('btn.jpg') no-repeat 50% 50%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /*border: 1px solid #2743da;*/
+}
