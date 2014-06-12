@@ -172,4 +172,7 @@ div.container li{
    
 }
 
-
+.selected{
+  color: red;
+  font-weight: bold;
+}

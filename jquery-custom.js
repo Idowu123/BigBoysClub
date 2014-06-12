@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 	var pages = ['car', 'watches', 'residence', 'phone', 'club', 'shoe', 'perfume', 'cloth'];
-
+	
 	jQuery.fn.extend({
 		quizNav: function(action){
 			var div = $(this).closest('div');
@@ -71,8 +71,14 @@ $( document ).ready(function() {
 	$('#start').click(function(event){
 		event.preventDefault();
 		//$(this).closest('div').fadeOut('hide');
-		$('#welcome').fadeOut('slow');
+		$('#welcome').addClass('hide');
 		$('#car').toggleClass('hide');
+	});
+
+	$('.page li').click(function(event){
+		event.preventDefault();
+		$(this).siblings().removeClass('selected');
+		$(this).addClass('selected');
 	});
 
 	$('.next').click(function(event){
@@ -83,5 +89,6 @@ $( document ).ready(function() {
 	$('.previous').click(function(event){
 		event.preventDefault();
 		$(this).quizNav("previous");		
-	});  
+	});
+
 });
