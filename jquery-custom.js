@@ -1,6 +1,39 @@
 $( document ).ready(function() {
-	var pages = ['car', 'watches', 'residence', 'phone', 'club', 'shoe', 'perfume', 'cloth'];
+	var pages = ['car', 'watch', 'residence', 'phone', 'club', 'shoe', 'perfume', 'cloth'];
+	var score = {};
+	function addScore(id, value){
+    score[id] = msg;
+	}
 	
+	jQuery.fn.extend({
+		score: function(action){
+			var divId = $(this).closest('div').attr('id');
+			if (action === "next")
+			for(var que in pages){
+				if(pages[que] === divId)
+				switch(){
+					case: "java"
+						 += 100;
+						break;
+					case: "php"
+						//code
+						break;
+					case: "ruby"
+						//code
+						break;
+					case: "python"
+						//code
+						break;
+					case: "jquery"
+						//code
+						break;
+					default:
+						//code;
+				}	
+			}		
+		}
+	});
+
 	jQuery.fn.extend({
 		quizNav: function(action){
 			var div = $(this).closest('div');
@@ -83,7 +116,8 @@ $( document ).ready(function() {
 
 	$('.next').click(function(event){
 		event.preventDefault();
-		$(this).quizNav("next");		
+		$(this).quizNav("next");
+		$(this).score("next");
 	});
 
 	$('.previous').click(function(event){
