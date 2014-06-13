@@ -81,6 +81,7 @@ h1,h2,h3,h4,h5,h6,p{
 
 p, ul, li, ol {
   font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -305,6 +306,10 @@ div.page ul{
   margin: 20px auto;
 }
 
+li{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
 div.page .options li{
   background-color: #eee;
   padding: 15px;
@@ -357,3 +362,4 @@ li.selected{
   font-weight: bold;
   font-size: 1.5em;
 }
+
