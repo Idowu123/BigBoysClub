@@ -117,7 +117,7 @@ $( document ).ready(function() {
 	$('.next').click(function(event){
 		event.preventDefault();
 		$(this).quizNav("next");
-		$(this).score("next");
+		// $(this).score("next");
 	});
 
 	$('.previous').click(function(event){
