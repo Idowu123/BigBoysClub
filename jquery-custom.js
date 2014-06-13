@@ -103,12 +103,12 @@ $( document ).ready(function() {
 
 	$('#start').click(function(event){
 		event.preventDefault();
-		//$(this).closest('div').fadeOut('hide');
 		$('#welcome').addClass('hide');
 		$('#car').toggleClass('hide');
+		$('html').addClass('car');
 	});
 
-	$('.page li').click(function(event){
+	$('.page .options li').click(function(event){
 		event.preventDefault();
 		$(this).siblings().removeClass('selected');
 		$(this).addClass('selected');

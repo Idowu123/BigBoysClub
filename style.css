@@ -87,7 +87,7 @@ h1 {
   font-size: 1.1em;
   margin: 0.1em 0;
   font-weight: bold;
-  letter-spacing: -2px;}
+  letter-spacing: -1px;}
 
 
 h2 {
@@ -159,46 +159,52 @@ div.container h1{
 }
 
 
-div.container li{
-  display: block;
-  text-align: center;
-   
-}
-
-.selected{
-  color: red;
-  font-weight: bold;
-}
-
-#quiz-nav li{
-  display: inline;
-  text-align: center;
-}
-
 html{
   background:#fff url('images/house.jpg') top center;
   background-size: cover;
 }
 
-#welcome h1{
-  font-family: 'Lemon', cursive !important;
-}
-#main{
-  text-align: center;
-  padding: 100px 0 0 0;
-  font-size: 1.2em;
-  color: #fff;
+html.car{
+  background:#fff url('images/car.jpg') top center;
 }
 
-#main .container{
+html.watch{
+  background:#fff url('images/watch.jpg') top center;
+}
+
+html.perfume{
+  background:#fff url('images/perfume.jpg') top center;
+}
+
+html.cloth{
+  background:#fff url('images/cloth.jpg') top center;
+}
+
+html.shoe{
+  background:#fff url('images/shoe.jpg') top center;
+}
+
+html.club{
+  background:#fff url('images/club.jpg') top center;
+}
+
+html.phone{
+  background:#fff url('images/phone.jpg') top center;
+}
+
+#welcome{
+
+}
+
+#welcome h1{
+  font-family: 'Lemon', 'Cooper Black', cursive !important;
+  margin-top: 50px;
+}
+
+#ain .container{
   display: inline-block;
   vertical-align: middle;
 }
-
-#main .main{
-  opacity: 0.8; padding: 70px 0 0 0;
-  background-color: #420214;
-  border-radius: 3em;}
 
 .main h1{
   padding-bottom: 15px;
@@ -206,46 +212,13 @@ html{
 
 h1+p{
   margin-bottom: 0;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .bold{
   font-weight: bold;
   margin: 0;
   padding: 0;
-}
-
-/*#car{
-  background-image: url('images/car.jpg');
-}
-#watch{
-  background-image: url('images/watch.jpg');
-}
-#residence{
-  background-image: url('images/house.jpg')
-}
-
-#phone{
-  background-image: url('images/phone.jpg');
-}
-
-#club{
-  background-image: url('images/club.jpg');
-}
-
-#shoe{
-  background-image: url('images/shoe.jpg');
-}
-#perfume{
-  background-image: url('images/perfume.jpg');
-}
-
-#cloth{
-  background-image: url('images/cloth.jpg');
-}*/
-
-header .container{
-  padding:5px 0;
 }
 
 .logo{
@@ -261,27 +234,37 @@ header .container{
 .logo h1 span{
   font-size: 0.5em;
   padding: 0 5px;
+  text-shadow: 0 1px 1px #2babe1;
+  letter-spacing: 0;
 }
 
 .logo h1{
-  letter-spacing: 1px;
-  font-family: 'Lemon', cursive !important;
+  font-family: 'Lemon', 'Cooper Black', cursive !important;
   color: #fff;
-  text-shadow: 0 1px 1px #fff5e4;
+}
+
+.logo h1 a{
+  font-size: 0.8em;
+  letter-spacing: -1px;
+  text-shadow: 0 1px 2px #fff5e4;
 }
 
 .logo p{
   font-style: italic;
+  letter-spacing: 1px;
 }
 
 .tag{
-  font-weight: bold;
-  color: #dedede;
+  font-size: 1em;
+  color: #420214;
+  letter-spacing: 1px;
+  font-style: italic;
 }
 
 header{
-  background: #ff5959 url('images/headerbg.jpg') top left;
-  box-shadow: 0 1px 9px #000;
+  background: url('images/headerbg.jpg') top left;
+  box-shadow: 0 1px 4px rgba(80,80,80,0.5);
+  margin-bottom: 50px;
 }
 
 .vcenter:before{
@@ -293,15 +276,81 @@ header{
 }
 
 #start{
-  text-shadow: 0 1px 3px rgb(220, 36, 36);
+  text-shadow: 0 1px 1px rgb(0,0,0,1);
   font-size: 1.625em !important;
-  color: #fff;
+  color: #fff; font-weight: bold;
   text-transform: uppercase; width: 250px;
   display: inline-block; vertical-align: middle;
   padding: 20px 0; letter-spacing: 1px;
-  background: #3f50ab url('btn.jpg') no-repeat 50% 50%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  /*border: 1px solid #2743da;*/
+  background: #3f50ab url('images/btn.jpg') no-repeat 50% 50%;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid #2743da;
+}
+p.discl{
+  font-size: 1em;
+}
+#car{
+  border: 1px solid white;
+}
+
+#main{
+  background-color: rgba(66,2,20, 0.8);
+  text-align: center; padding: 40px 0;
+  border-radius: 3em;
+  font-size: 1.3em; min-height: 500px;
+  color: #fff; margin: 0 auto;
+  width: 70%;
+}
+div.page ul{
+  text-align: center;
+  margin: 20px auto;
+}
+
+div.page .options li{
+  background-color: #eee;
+  padding: 15px;
+  margin: 20px auto;
+  color: #666;
+  width: 80%;
+}
+
+#quiz-nav li{
+  margin: 20px auto;
+  width: 80%;}
+
+#quiz-nav li a{
+  display: inline-block;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgb(0,0,0,1);
+  color: #fff; font-weight: bold;
+  vertical-align: middle;
+  padding: 10px 0; letter-spacing: 1px;
+  background: #3f50ab url('images/btn.jpg') no-repeat 50% 50%;
+  border: 1px solid #2743da;}
+
+.next{
+  float: right;
+  width: 30%;
+}
+
+.previous{
+  float: left;
+  width: 30%;
+}
+
+div.page p{
+  font-weight: bold;
+}
+
+li.selected{
+  color: white !important;;
+  font-weight: bold;
+  background: #fd4100 !important;
+  box-shadow: 1px 3px 6px rgba(255,255,255,0.8);
+}
+
+.options li:hover{
+  cursor: pointer;
 }
