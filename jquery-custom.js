@@ -1,38 +1,76 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 	var pages = ['car', 'watch', 'residence', 'phone', 'club', 'shoe', 'perfume', 'cloth'];
 	var score = {};
 	function addScore(id, value){
-    score[id] = msg;
+    score[id] = value;
+	}
+
+	//initialize all to zero
+	for (var i=0; i<pages.length; i++){
+		addScore(pages[i], 0);
 	}
 	
-	// jQuery.fn.extend({
-	// 	score: function(action){
-	// 		var divId = $(this).closest('div').attr('id');
-	// 		if (action === "next")
-	// 		for(var que in pages){
-	// 			if(pages[que] === divId)
-	// 			switch(){
-	// 				case: "java"
-	// 					nk += 100;
-	// 					break;
-	// 				case: "php"
-	// 					//code
-	// 					break;
-	// 				case: "ruby"
-	// 					//code
-	// 					break;
-	// 				case: "python"
-	// 					//code
-	// 					break;
-	// 				case: "jquery"
-	// 					//code
-	// 					break;
-	// 				default:
-	// 					//code;
-	// 			}	
-	// 		}		
-	// 	}
-	// });
+	jQuery.fn.extend({
+		//this function is called when "next" or "previous" in clicked
+		setScore: function(action){
+			var div = $(this).closest('div');
+			var choice = div.find('.selected').attr('class').split(' ')[1]; //gets the class of the selected li.
+			var divId = $(this).closest('div').attr('id'); //get the id of the particular question e.g car
+			if (action === "next"){  //if the action is next
+				switch(choice){
+					case "java":
+						addScore(divId, 100);
+						break;
+					case "php":
+						addScore(divId, 70);
+						break;
+					case "ruby":
+						addScore(divId, 50);
+						break;
+					case "python":
+						addScore(divId, 20);
+						break;
+					case "jquery":
+						addScore(divId, -20);
+						break;
+					default:
+						//code;
+				}	
+			}
+			else if (action === "previous"){  //if the action is previous
+				switch(choice){
+					case "java":
+						addScore(divId, -100);
+						break;
+					case "php":
+						addScore(divId, -70);
+						break;
+					case "ruby":
+						addScore(divId, -50);
+						break;
+					case "python":
+						addScore(divId, -20);
+						break;
+					case "jquery":
+						addScore(divId, +20);
+						break;
+					default:
+						//code;
+				}	
+			}		
+		}
+	});
+
+	//Computing the total score
+	jQuery.fn.extend({
+		totalScore: function(action){
+			var totalScore = 0;
+			for (var i=0; i<pages.length; i++){
+				totalScore += score[pages[i]];
+			}
+			return totalScore;
+		}
+	});
 
 	jQuery.fn.extend({
 		quizNav: function(action){
@@ -62,7 +100,8 @@ $( document ).ready(function() {
 						$("#cloth").toggleClass('hide');
 						break;
 					case "cloth":
-						//code
+						$("#result").toggleClass('hide');
+						$('#finalscore').append("<span>" + totalScore() + "<span>");
 						break;
 					default:
 						// default code
@@ -93,6 +132,7 @@ $( document ).ready(function() {
 						break;
 					case "cloth":
 						$("#shoe").toggleClass('hide');
+
 						break;
 					default:
 						// default code
@@ -117,12 +157,13 @@ $( document ).ready(function() {
 	$('.next').click(function(event){
 		event.preventDefault();
 		$(this).quizNav("next");
-		// $(this).score("next");
+		$(this).setScore("next");
 	});
 
 	$('.previous').click(function(event){
 		event.preventDefault();
 		$(this).quizNav("previous");		
+		$(this).setScore("previous");
 	});
 
 });

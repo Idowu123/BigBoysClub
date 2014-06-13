@@ -160,7 +160,7 @@ div.container h1{
 
 
 html{
-  background:#fff url('images/house.jpg') top center;
+  background:#fff url('images/house.jpg') no-repeat top center;
   background-size: cover;
 }
 
@@ -291,12 +291,9 @@ header{
 p.discl{
   font-size: 1em;
 }
-#car{
-  border: 1px solid white;
-}
 
 #main{
-  background-color: rgba(66,2,20, 0.8);
+  background-color: rgba(66,2,20, 0.7);
   text-align: center; padding: 40px 0;
   border-radius: 3em;
   font-size: 1.3em; min-height: 500px;
@@ -353,4 +350,10 @@ li.selected{
 
 .options li:hover{
   cursor: pointer;
+}
+
+#finalscore{
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
 }
