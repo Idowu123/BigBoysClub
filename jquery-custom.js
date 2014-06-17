@@ -9,13 +9,27 @@ $(document).ready(function() {
 	for (var i=0; i<pages.length; i++){
 		addScore(pages[i], 0);
 	}
-	
+
+	jQuery.fn.extend({
+		classHtml: function(){
+			var className;
+			for (var i=0; i<pages.length; i++){
+				if ($(this).closest('div').attr('id') === pages[i]){
+					className = pages[i+1];
+					break;
+				}
+			}
+			$('html').addClass(className);
+		}
+	});
+
 	jQuery.fn.extend({
 		//this function is called when "next" or "previous" in clicked
 		setScore: function(action){
 			var div = $(this).closest('div');
-			var choice = div.find('.selected').attr('class').split(' ')[1]; //gets the class of the selected li.
-			var divId = $(this).closest('div').attr('id'); //get the id of the particular question e.g car
+			var choice = div.find('.selected').attr('title'); //gets the title of the selected li.
+			var divId = div.attr('id'); //get the id of the particular question e.g car
+
 			if (action === "next"){  //if the action is next
 				switch(choice){
 					case "java":
@@ -62,15 +76,13 @@ $(document).ready(function() {
 	});
 
 	//Computing the total score
-	jQuery.fn.extend({
-		totalScore: function(action){
-			var totalScore = 0;
-			for (var i=0; i<pages.length; i++){
-				totalScore += score[pages[i]];
-			}
-			return totalScore;
-		}
-	});
+
+	function totalScore(){
+    var totalSum = 0;
+		for (var i=0; i<pages.length; i++){
+			totalSum += score[pages[i]];}
+		return totalSum;
+	}
 
 	jQuery.fn.extend({
 		quizNav: function(action){
@@ -154,16 +166,23 @@ $(document).ready(function() {
 		$(this).addClass('selected');
 	});
 
+	$('.page .options li').dblclick(function(event){
+		event.preventDefault();
+		$(this).toggleClass('selected');
+	});
+
 	$('.next').click(function(event){
 		event.preventDefault();
-		$(this).quizNav("next");
 		$(this).setScore("next");
+		$(this).quizNav("next");
+		$(this).classHtml();
 	});
 
 	$('.previous').click(function(event){
 		event.preventDefault();
-		$(this).quizNav("previous");		
 		$(this).setScore("previous");
+		$(this).quizNav("previous");		
+		
 	});
 
 });
