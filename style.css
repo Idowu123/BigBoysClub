@@ -90,7 +90,6 @@ h1 {
   font-weight: bold;
   letter-spacing: -1px;}
 
-
 h2 {
   color: #dd3b2a;
   font-size: 1.5em;
@@ -161,41 +160,47 @@ div.container h1{
 
 
 html{
-  background:#fff url('images/house.jpg') no-repeat top center;
+  background:#000 url('images/house.jpg') no-repeat top center;
+  background-size: cover;
+}
+html.car{
+  background:#000 url('images/car.jpg') top center;
   background-size: cover;
 }
 
-html.car{
-  background:#fff url('images/car.jpg') top center;
-}
-
 html.watch{
-  background:#fff url('images/watch.jpg') top center;
+  background:#000 url('images/watch.jpg') top center;
+  background-size: cover;
 }
 
-html.perfume{
-  background:#fff url('images/perfume.jpg') top center;
+html.residence{
+  background:#000 url('images/home.jpg') top center;
+  background-size: cover;
 }
-
-html.cloth{
-  background:#fff url('images/cloth.jpg') top center;
+html.phone{
+  background:#000 url('images/phone.jpg') top center;
+  background-size: cover;
+}
+html.club{
+  background:#000 url('images/club.jpg') top center;
+  background-size: cover;
 }
 
 html.shoe{
-  background:#fff url('images/shoe.jpg') top center;
+  background:#000 url('images/shoe.jpg') top center;
+  background-size: cover;
 }
 
-html.club{
-  background:#fff url('images/club.jpg') top center;
+html.perfume{
+  background:#000 url('images/perfume.jpg') top center;
+  background-size: cover;
 }
 
-html.phone{
-  background:#fff url('images/phone.jpg') top center;
+html.cloth{
+  background:#000 url('images/cloth.jpg') top center;
+  background-size: cover;
 }
 
-#welcome{
-
-}
 
 #welcome h1{
   font-family: 'Lemon', 'Cooper Black', cursive !important;
@@ -360,6 +365,16 @@ li.selected{
 #finalscore{
   color: white;
   font-weight: bold;
-  font-size: 1.5em;
+  font-weight: 900;
+  line-height: 1.5;
 }
 
+#finalscore span{
+  display: none;
+}
+
+.big{
+  font-family: 'Lemon', 'Cooper Black', cursive !important;
+  font-size: 3.2em;
+  letter-spacing: 1px; border-bottom: 1px dotted red;
+  text-shadow: 0 1px 1px #fff5e4;}
